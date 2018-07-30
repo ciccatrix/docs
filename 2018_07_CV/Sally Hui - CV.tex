@@ -1,0 +1,159 @@
+% resume.tex
+%
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+% (c) 2003-2007 David J. Grant <davidgrant-at-gmail.com> http://www.davidgrant.ca
+% (c) 2007-2014 Todd C. Miller <Todd.Miller@sudo.ws> http://www.sudo.ws/todd
+%
+% This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisco, California, 94105, USA.
+
+\documentclass[letterpaper,11pt]{article}
+
+%-----------------------------------------------------------
+\usepackage[empty]{fullpage}
+\usepackage{color}
+\definecolor{mygrey}{gray}{0.85}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\usepackage{amsmath,amsfonts,graphicx}
+\usepackage{hyperref}
+% Adjust margins to 0.5in on all sides
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.0in}
+\addtolength{\topmargin}{-0.5in}
+\addtolength{\textheight}{1.0in}
+
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resheading}[1]{{\large \colorbox{mygrey}{\begin{minipage}{\textwidth}{\textbf{#1 \vphantom{p\^{E}}}}\end{minipage}}}}
+\newcommand{\ressubheading}[4]{
+\begin{tabular*}{7.0in}{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+\end{tabular*}\vspace{-6pt}}
+%-----------------------------------------------------------
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,   
+    urlcolor=blue
+}
+
+\begin{document}
+
+\begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
+\textbf{\large Sally Hui}  & +1 647-936 3226 (cell)\\
+38 Shortt Street &  sayhui@uwaterloo.ca \\
+York, ON M6E 3X8, Canada & citizenship: Canadian\\
+\end{tabular*}
+\\
+
+\vspace{0.1in}
+
+\resheading{Research Interests}
+\newline \newline
+I am a third-year undergraduate student who is passionate about robotics. I have worked in both academic and industrial research settings, studying various aspects of SLAM. In my term under Professor Waslander at the University of Waterloo, I developed the methodology to determine the extrinsic calibration of a gimbal camera system. At 2G Robotics, I was part of a three person team, where I developed commercial grade software for performing camera-based SLAM in underwater environments. I am now looking to expand my experience in robotics and explore other fields such as motion planning and controls, to provide direction for future graduate studies.
+\newline
+
+\resheading{Education}
+\begin{itemize}
+\item 
+	\ressubheading{University of Waterloo}{Waterloo, ON}{Candidate for BASc. (Mechatronics Engineering), Hons., CGPA 3.93}{2015 - 2020}
+	\newline
+	\newline
+		Relevant coursework: Physics 2: Dynamics (97\%), Advanced Calculus (100\%), System Models 1 (91\%), Linear Systems and Signals (90\%), Numerical Methods (92\%), Algorithms and Data Structures (90\%).
+		
+		Achieved Term Dean's Honours List in terms 1A (12th out of 192), 2B (6th out of 103). 
+
+\end{itemize}
+
+\resheading{Robotics Experience}
+\begin{itemize}
+\item
+	\ressubheading{Waterloo Autonomous Vehicles Laboratory (WAVELab)}{Waterloo, ON}{Undergraduate Research Assistant (Supervisor: Prof. Steven Waslander)}{Sept. 2017 - April 2018}
+	\newline
+	\newline
+Researched on the calibration of dynamic camera clusters for gimbal SLAM. My contributions include assisting with the formulation of a mutual information based camera calibration approach, and performing MATLAB simulation studies examining the effect of noise on the estimation parameters. Two journal papers to be submitted to the International Journal of Robotics Research were the result of this experience.
+	
+\item
+	\ressubheading{2G Robotics}{Waterloo, ON}{Software Development Intern}{May 2018 - Aug. 2018}
+	\newline \newline
+Formulated and built a graph SLAM solution using GTSAM in C++ to produce real-time trajectories and sparse point cloud maps of underwater scenes. Implemented Gauss-Newton optimization on $\mathbf{SO(3)} \times \mathbb{R}^3$ to perform pose estimation on stereo cameras in NumPy (Python) and Eigen (C++). Assisted in developing feature detection, association, and their data structures. Performed literature review on state-of-the-art SLAM research topics such as Direct Sparse Odometry (DSO), Semi-Direct Visual Odometry (SVO), and Inverse Depth Parametrization, and delivered a company-wide presentation on non-linear optimization. Currently exploring optimization in the framework of inverse depth parametrization.
+\end{itemize}
+
+\resheading{Publications}
+
+\begin{description}
+\item[{\parbox[t]{\linewidth}{\textnormal{A. Das,} S. Hui \textnormal{and S. L. Waslander,} ``Dynamic Camera Cluster Calibration for Multi-Camera Visual SLAM'', \textnormal{to be submitted to \emph{The International Journal of Robotics Research (IJRR)}}}}]
+\item[{\parbox[t]{\linewidth}{\textnormal{A. Das, J. Rebello, }S. Hui \textnormal{and S. L. Waslander}, ``Automatic Calibration of Dynamic Camera Clusters using Information-Theoretic Next-Best-View'', \textnormal{to be submitted to \emph{The International Journal of Robotics Research (IJRR)}}}}]
+\end{description}
+
+\resheading{Teaching}
+
+\begin{itemize}
+\item
+	\ressubheading{2G Robotics}{Waterloo, ON}{Technical Presentation}{July 2018}
+	\newline \newline
+	Tutorial on formulating and iteratively solving non-linear optimization problems. [\href{https://github.com/ciccatrix/docs/blob/master/2018_07-2G_Optimization_Presentation/tech%20talk%20-%20optimization.pdf}{Transcript}]
+	
+\item
+	\ressubheading{University of Waterloo}{Waterloo, ON}{MTE220: Sensors and Instrumentation, Unofficial Tutor}{May 2018 - Aug. 2018}
+	\newline \newline
+	Delivered two lectures to 60+ students on bode plots and filter design.
+
+\item
+	\ressubheading{University of Waterloo}{Waterloo, ON}{GENE121: Digital Computation, Teaching Assistant (part-time)}{Sept. 2017 - Dec. 2017}
+	\newline \newline
+	Conducted weekly help sessions (about 15 students per session) to assist with course concepts pertaining to C++ and RobotC. Marked student laboratory demonstrations.
+\end{itemize}
+
+\resheading{Software Experience}
+\begin{itemize}
+
+\item
+	\ressubheading{Raven Telemetry}{Ottawa, ON}{Software Development Intern}{Jan. 2017 - Apr. 2017}
+	\newline \newline
+Developed data synchronization between a Raspberry Pi and an Android tablet to track throughput on a manual production process. The work involved using Python, Javascript and WebSockets. Contributed to day-to-day Android development, and data processing scripts for PLC data communicated over MQTT.
+	
+\item
+	\ressubheading{Nanometrics Seismological}{Ottawa, ON}{Software Design Verification, Tool Development}{May 2016 - Aug. 2016}
+\newline \newline
+Used the Yocto Project's BitBake to incorporate software packages and improve the build process for embedded Linux systems. Executed and reviewed software verification plans, tracked issues using Atlassian JIRA.
+
+\end{itemize}
+
+\resheading{Projects}
+\begin{itemize}
+\item
+	\ressubheading{Implementation of the half-fit dynamic memory management algorithm}{}{MTE241, Introduction to Computer Structures and Real-Time Systems}{}
+	\newline \newline
+	Implemented the half-fit algorithm to manage a 32 KiB pool of memory on a Keil MCB1700 board in embedded C. Used linked lists, arrays, bit vectors, and bit-wise operators to allocate and deallocate memory.
+	
+\item
+	\ressubheading{Taipei 101 - Tuned Mass Damper Analysis}{}{MTE202, Ordinary Differential Equations}{}
+	\newline \newline
+	Modelled the dynamics of Taipei 101 as pendulum motion on a moving block. Performed a structural analysis of Taipei 101's concrete supercolumns to calculate critical parameters of the resulting model. Performed force analysis to simulate response to earthquake and wind excitation.
+	
+\end{itemize}
+
+\resheading{Skills}
+\newline \newline
+Languages: C++14, Python, MATLAB
+
+Tools: \LaTeX, git, JIRA, AutoCAD, SolidWorks
+
+Libraries: Eigen, GTSAM, OpenCV, NumPy
+\newline
+
+\resheading{Awards}
+\newline
+\newline
+\begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
+		University of Waterloo HeForShe IMPACT Scholarship (\$4,500) & 2015-2018\\
+		University of Waterloo President's Scholarship (\$2,000) & 2015-2016\\
+\end{tabular*}
+
+\end{document}
